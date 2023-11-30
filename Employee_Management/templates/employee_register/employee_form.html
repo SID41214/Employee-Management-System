@@ -1,0 +1,25 @@
+{% extends 'employee_register/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+{% comment %} <p>  FORM TO PERFORM CRUD OPERATIONS</p> {% endcomment %}
+<form action="" method="post" autocomplete="off">  
+{% csrf_token %}       
+
+{{ form}}
+
+<div class="row">
+    <div class="col-md-8">
+        <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fa-solid fa-database" style="color: #3b2353;"></i>Submit</button>
+
+    </div>
+    <div class="col-md-4">
+        <a href="{%  url 'employee_list' %}" class="btn btn-secondary btn-block btn-lg">
+            <i class="fas fa strem"></i> Back to list
+        </a>
+    </div>
+</div>
+</form> 
+{% endblock content %}
+    
